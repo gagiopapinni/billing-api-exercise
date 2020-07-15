@@ -3,8 +3,8 @@
 
 ## quick api overview
 
-* /register (POST)
-   parameters: target-payment targer(string), amount-payment value(int) 
+* /register (POST)  
+   parameters: target-payment target name(string), amount-transaction value(int)    
    registers a payment to be confirmed, redirects to confirmation page i.e /payments/card/form?sessionID=...  
 * /payments/card/form (GET)  
    parameters: sessionID  
@@ -14,7 +14,7 @@
    parameters: owner, cvv, cardNumber, expirationDate, sessionID  
    checks card data in order to confirm transaction   
    If 30 mins have passed since payment registration, confirmation will fail  
-   If card number satisfies the Luna algorithm, confirmation succeeds  
+   Otherwise if card number satisfies the Luna algorithm, confirmation succeeds  
 * /payments/card/transactions (GET)  
    parameters: from, to - UNIX timestamps  
    returns json object with registered transactions  
