@@ -1,5 +1,5 @@
 USE billing;
-CREATE TABLE transction
+CREATE TABLE transaction
 (
   id              INT(20) unsigned NOT NULL AUTO_INCREMENT,
   target          VARCHAR(20) NOT NULL,  
