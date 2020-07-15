@@ -1,0 +1,13 @@
+{
+    "name": "gagik/billing",
+    "authors": [
+        {
+            "name": "Gagik Papikyan"
+        }
+    ],
+    "require": {
+        "slim/slim": "3",
+        "slim/php-view": "^2.2"
+
+    }
+}

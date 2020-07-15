@@ -1,0 +1,44 @@
+
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta content='text/html' charset='UTF-8' /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Payment Landing Page</title>
+    <script src=/assets/js/bootstrap/bootstrap.js></script>
+    <link rel="stylesheet" href="/assets/js/bootstrap/bootstrap.css" type="text/css"></link>
+   
+  </head>
+  
+  <body>
+    <div class="cotainer-fluid">
+     <div class="row">
+       <div class="col-12 col-sm-4 mx-auto">
+        <div class="text-center border rounded mx-auto" width='300px' style='padding:20px;margin-top:30px;'>
+          <h5> Make Transaction </h5>
+          <p class="text-danger">  </p>
+          
+          <form action= <?=$action?> method="POST"  class="mt-5">
+            <div class="row">
+              <div class="col">
+                 <div class="form-group">
+                   <label for="Target">Target</label>
+                   <input type="text" class="form-control" name="target"  placeholder= "Store-1-2-3" maxlength='10' required='true'>
+                 </div>
+              </div>
+              <div class="col">
+                 <div class="form-group">
+                   <label for="amount">Amount($)</label>
+                    <input type="number" class="form-control"  name="amount" placeholder= "10"  min="1" max='99999999'  required='true'>
+                 </div>
+              </div>
+            </div>
+          
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary" id="Proceed">Proceed</button>
+            </div>
+        </form>
+     </div>
+    </div>
+  </body>
+</html>
