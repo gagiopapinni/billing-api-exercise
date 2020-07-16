@@ -14,7 +14,7 @@
    parameters: owner, cvv, cardNumber, expirationDate, sessionID  
    checks card data in order to confirm transaction   
    If 30 mins have passed since payment registration, confirmation will fail  
-   Otherwise if card number satisfies the Luna algorithm, confirmation succeeds  
+   Otherwise if card number satisfies the Luhn algorithm, confirmation succeeds  
 * /payments/card/transactions (GET)  
    parameters: from, to - UNIX timestamps  
    returns json object with registered transactions  
