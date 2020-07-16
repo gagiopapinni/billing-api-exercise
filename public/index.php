@@ -18,7 +18,7 @@ $container['view'] = function ($container) {
 
 $app->get('/payments/card/transactions', function ($request, $response) {
     $params = $request->getQueryParams();
-    if(!$params['from'] || !$params['to'])
+    if(!($params['from'] ?? FALSE) || !($params['to'] ?? FALSE))
         return $response->withHeader("Content-Type","application/json")
                         ->write("{error:{text:'incomplete arguments'}}");
     
